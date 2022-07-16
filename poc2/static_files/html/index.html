@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="maincontainer">
+        <div class="form">
+            <div class="signinandsignup">
+                <form action="/studentregistration" method="post">
+                    <h2>SignUp</h2>
+
+
+                    <div class="input">
+                        <i class="glyphicon glyphicon-user"></i>
+                        <input type="text" name="first_name" placeholder="FirstName">
+                    </div>
+
+                    <div class="input">
+                        <i class="glyphicon glyphicon-user"></i>
+                        <input type="text" name="last_name" placeholder="LastName" >
+                    </div>
+                    
+
+
+
+                    <div class="input">
+                        <i class="glyphicon glyphicon-envelope"></i>
+                        <input type="email" name="email" placeholder="Email" >
+                    </div>
+
+
+                    <div class="input">
+                        <i class="fa fa-phone"></i>
+                        <input type="tel" name="mobile_number" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="14"  required>
+                    </div>
+
+
+                    <div class="input">
+                        <i class="glyphicon glyphicon-lock"></i>
+                        <input type="password" name="password" placeholder="Password">
+                    </div>
+
+                    <div class="input">
+                        <i class="glyphicon glyphicon-lock"></i>
+                        <input type="password" name="confirmpass" placeholder="Confirm Password">
+                    </div>
+                        <input type="submit" value="SignUp" class="btn">
+
+                        <div class="socialmedia">
+                            <a href="#" class="icon"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="icon"><i class="fa fa-instagram"></i></a>
+                            <a href="#" class="icon"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="icon"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                </form>
+            </div>
+
+
+           
+
+        </div>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body , input
+{
+    font-family: 'Poppins',sans-serif;
+}
+
+.maincontiner
+{
+    position: relative;
+    width: 100%;
+    background-color: white;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.form
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 25%;
+
+}
+
+.maincontainer::before
+{
+    content: '';
+    position: absolute;
+    height: 2000px;
+    width: 2000px;
+    top: 10%;
+    right: 48%;
+    background-image: linear-gradient(-45deg, #20dbc2 0% ,#00bfa6 100%);
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+h2
+{
+  font-size: 4.2rem;
+  color:#444;
+  margin-bottom: 10px;
+  font-weight: 500px;
+
+}
+.input
+{
+    max-width: 380px;
+    width: 100%;
+    height: 55px;
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    position: relative;
+    padding: 0 0.4rem;
+}
+ .input i{
+     text-align: center;
+     line-height: 55px;
+     color: #acacac;
+     font-size: 1.8rem;
+ }
+
+ .input input{
+     background: none;
+     outline: none;
+     border: none;
+     font-weight: 600;
+     font-size: 1.8rem;
+     color: #333;
+ }
+ .btn
+ {
+     height: 49px;
+     width: 150px;
+     border-radius: 48px;
+     background-color:#20dbc2;
+     color: white;
+     text-transform:uppercase;
+     font-weight: 600;
+     margin: 10px 0;
+     transition: 0.4s;
+
+ }
+ .btn:hover
+ {
+     background-color: #00bfa6;
+ }
+.socialmedia
+{
+   
+    display: flex;
+    justify-content: center;
+
+}
+
+.icon
+{
+    height: 46px;
+    width: 46px;
+    border: 1px solid #333;
+    margin: 0 0.45;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    transition: 0.5s;
+    margin-left: 7px;
+    
+}
+.icon:hover{
+    background-color: white;
+    color: #20dbc2;
+}
+.signinandsignin{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.signinandsignin .btn
+{
+    height: 49px;
+    width: 150px;
+    border-radius: 48px;
+    background-color:#20dbc2;
+    color: white;
+    text-transform:uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: 0.4s;
+
+}
+
+
+
+
+
+</style>
+</html>
